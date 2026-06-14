@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolkata Travel & Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Kolkata Tours</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li id="nav-register"><a href="register.html">Register</a></li>
+            <li id="nav-login"><a href="login.html">Login</a></li>
+            <li id="nav-logout" style="display: none;"><a href="#" id="logout-btn">Logout</a></li>
+            <li><button id="dark-mode-toggle" class="btn-small">Dark Mode</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Kolkata</h1>
+            <p>Kolkata, known as the City of Joy, offers a rich blend of culture, history, architecture, food, and heritage. Explore the best destinations with our affordable travel packages.</p>
+            <a href="#packages" class="btn">Explore Packages</a>
+        </div>
+    </header>
+
+    <section id="packages" class="section">
+        <h2>Our Travel Packages</h2>
+        <div class="search-container">
+            <input type="text" id="package-search" placeholder="Search for a package...">
+        </div>
+        
+        <div class="card-container" id="package-list">
+            <div class="card package-card">
+                <img src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=600&q=80" alt="Howrah Bridge" class="card-img">
+                <h3>Budget Package</h3>
+                <p><strong>Duration:</strong> 2 Days / 1 Night</p>
+                <p><strong>Price:</strong> ₹4,999 per person</p>
+                <p><strong>Hotel:</strong> Budget Hotel (3 Star)</p>
+                <div class="plan">
+                    <p><strong>Day 1:</strong> Victoria Memorial, Howrah Bridge, Local Street Food Tour</p>
+                    <p><strong>Day 2:</strong> Dakshineswar Temple, Shopping, Departure</p>
+                </div>
+                <button class="btn book-btn">Book Now</button>
+            </div>
+
+            <div class="card package-card">
+                <img src="https://images.unsplash.com/photo-1594881497142-08fdfdfc4074?auto=format&fit=crop&w=600&q=80" alt="Victoria Memorial" class="card-img">
+                <h3>Standard Package</h3>
+                <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+                <p><strong>Price:</strong> ₹9,999 per person</p>
+                <p><strong>Hotel:</strong> Comfortable 4 Star Hotel</p>
+                <div class="plan">
+                    <p><strong>Day 1:</strong> Victoria Memorial, Indian Museum</p>
+                    <p><strong>Day 2:</strong> Eco Park, Boat Ride, Local Food Tour</p>
+                    <p><strong>Day 3:</strong> Dakshineswar Temple, Howrah Bridge, Departure</p>
+                </div>
+                <button class="btn book-btn">Book Now</button>
+            </div>
+
+            <div class="card package-card">
+                <img src="https://images.unsplash.com/photo-1536697246787-1f271311b0e9?auto=format&fit=crop&w=600&q=80" alt="Dakshineswar Temple" class="card-img">
+                <h3>Luxury Package</h3>
+                <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+                <p><strong>Price:</strong> ₹19,999 per person</p>
+                <p><strong>Hotel:</strong> Premium 5 Star Hotel</p>
+                <div class="plan">
+                    <p><strong>Day 1:</strong> Arrival, Victoria Memorial</p>
+                    <p><strong>Day 2:</strong> Eco Park, Science City</p>
+                    <p><strong>Day 3:</strong> Indian Museum, Shopping Tour</p>
+                    <p><strong>Day 4:</strong> Dakshineswar Temple, Belur Math</p>
+                    <p><strong>Day 5:</strong> Howrah Bridge, Departure</p>
+                </div>
+                <button class="btn book-btn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <ul>
+                <li>✅ Affordable Packages</li>
+                <li>✅ Trusted Guides</li>
+                <li>✅ Comfortable Stay</li>
+                <li>✅ 24×7 Support</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>We are a small Kolkata-based travel company dedicated to providing affordable and memorable travel experiences for tourists visiting Kolkata.</p>
+            <p><strong>Our Mission:</strong> To make Kolkata's rich heritage accessible to everyone.</p>
+            <p><strong>Our Vision:</strong> To become the most trusted student-run tourism platform in West Bengal.</p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <h2>What Our Travelers Say</h2>
+        <div class="testimonials">
+            <p>"Amazing Kolkata experience!" – <em>Rahul</em></p>
+            <p>"Budget friendly and well organized." – <em>Priya</em></p>
+            <p>"Great service and comfortable hotels." – <em>Amit</em></p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><strong>Phone Number:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> info@kolkatatours.com</p>
+                <p><strong>Address:</strong> Park Street, Kolkata, West Bengal</p>
+            </div>
+            <form id="contact-form" class="form">
+                <input type="text" id="contact-name" placeholder="Your Name" required>
+                <input type="email" id="contact-email" placeholder="Your Email" required>
+                <textarea id="contact-message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kolkata Travel & Tourism.</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

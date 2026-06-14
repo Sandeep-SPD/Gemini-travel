@@ -1,0 +1,119 @@
+/* Basic Reset for clean layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* CSS Variables for Light & Dark Themes */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --nav-bg: #2c3e50;
+    --nav-text: #ffffff;
+    --card-bg: #f9f9f9;
+    --btn-bg: #e74c3c;
+    --btn-hover: #c0392b;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f1f1f1;
+    --nav-bg: #111111;
+    --card-bg: #2d2d2d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 15px 30px;
+    color: var(--nav-text);
+}
+.navbar .logo { font-size: 24px; font-weight: bold; }
+.nav-links { list-style: none; display: flex; gap: 15px; align-items: center;}
+.nav-links li a { color: var(--nav-text); text-decoration: none; }
+.nav-links li a:hover { text-decoration: underline; }
+
+/* Buttons */
+.btn {
+    background-color: var(--btn-bg);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn:hover { background-color: var(--btn-hover); }
+.btn-small { padding: 5px 10px; cursor: pointer; }
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* Layout Sections */
+.section { padding: 40px 20px; text-align: center; }
+.bg-light { background-color: var(--card-bg); }
+
+/* Cards */
+.card-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px;}
+.plan p { font-size: 14px; margin-bottom: 5px; }
+
+/* Forms & Authentication */
+.auth-container { max-width: 400px; margin: 50px auto; padding: 20px; background: var(--card-bg); border-radius: 8px; text-align: center; }
+.form { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.form input, .form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.error-msg { color: red; font-size: 14px; }
+.search-container { margin-bottom: 20px; }
+.search-container input { padding: 10px; width: 60%; max-width: 400px; }
+
+/* Footer */
+footer { background: var(--nav-bg); color: white; text-align: center; padding: 15px; margin-top: 20px; }
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    display: none; position: fixed; bottom: 20px; right: 20px;
+    background: var(--btn-bg); color: white; border: none;
+    padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 18px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .nav-links { flex-direction: column; text-align: center; display: none; }
+    /* Simple mobile nav hide/show logic could be added here */
+}
