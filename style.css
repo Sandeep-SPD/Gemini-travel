@@ -74,6 +74,12 @@ body {
     text-align: center;
     color: white;
 }
+@media (max-width: 768px) {
+    .hero {
+        /* Swap to your vertical image */
+        background-image: url("img/bg-mobile.jpg"); 
+    }
+}
 .hero-content {
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
