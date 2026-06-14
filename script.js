@@ -149,3 +149,44 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
+// --- 9. Center-Mode Auto Slider Logic ---
+const sliderTrack = document.getElementById('slider-track');
+
+if (sliderTrack) {
+    const slides = document.querySelectorAll('.slide-img');
+    let currentIndex = 0;
+
+    function updateSlider() {
+        // 1. Remove the 'active' class from all images
+        slides.forEach(slide => slide.classList.remove('active'));
+        
+        // 2. Add the 'active' class to the current center image
+        slides[currentIndex].classList.add('active');
+        
+        // 3. Calculate exact distance to move the track
+        // Get the pixel width of one image, plus the 20px gap we set in CSS
+        const gap = window.innerWidth <= 768 ? 10 : 20; // Matches mobile CSS gap
+        const slideWidth = slides[0].clientWidth + gap; 
+        
+        // 4. Move the track
+        sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function moveToNextSlide() {
+        currentIndex++;
+        
+        // Reset to the beginning if we hit the end
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        
+        updateSlider();
+    }
+
+    // Run the slider every 3 seconds
+    setInterval(moveToNextSlide, 3000);
+
+    // If the user resizes their browser window, recalculate the widths so it doesn't break
+    window.addEventListener('resize', updateSlider);
+}
