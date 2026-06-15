@@ -124,33 +124,9 @@ bookBtns.forEach(btn => {
     });
 });
 
-// --- 7. Scroll To Top Button ---
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-if (scrollToTopBtn) {
-    window.onscroll = function() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
 
-    scrollToTopBtn.addEventListener("click", function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
 
-// --- 8. Contact Form Alert ---
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert("Thank you for reaching out! We will get back to you soon.");
-        contactForm.reset();
-    });
-}
-
-// --- 9. Center-Mode Auto Slider Logic ---
+// --- 7. Center-Mode Auto Slider Logic ---
 const sliderTrack = document.getElementById('slider-track');
 
 if (sliderTrack) {
